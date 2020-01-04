@@ -23,7 +23,7 @@ pipeline {
         }
         stage('deploy'){
             steps{
-                sh "${env.DOCKER_HOME}/docker build -t semicolon/ged-be:1.0 ."
+                sh "${env.DOCKER_HOME}/docker build -t semicolonsquad/ged-be:1.0 ."
             }
         }
          stage('docker deploy'){
