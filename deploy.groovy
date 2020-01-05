@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('checkout'){
             steps{
-              checkout([$class: 'GitSCM', branches: [[name: '*/dev/tri']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: credentialsId, url: repoBackend ]]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: credentialsId, url: repoBackend ]]])
             }
         }
         stage('build') {
