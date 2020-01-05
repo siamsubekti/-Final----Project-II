@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  pet-care-fe:
+    image: ged/ged-fe:1.0
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - "3099:80"
+    restart: always
